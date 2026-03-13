@@ -1,7 +1,7 @@
 {
 	"name": "@letsroti/sourceembed",
-	"version": "1.0.1",
-	"description": "Store raw text or JSON in Cloudflare R2 and instantly get a public URL.",
+	"version": "1.0.2",
+	"description": "Store embed JSON to Cloudflare R2 and return a public URL",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
@@ -28,8 +28,8 @@
 		"prepublishOnly": "npm run build"
 	},
 	"keywords": [
-		"cloudflare-r2",
 		"s3-compatible",
+		"cloudflare-r2",
 		"json-hosting",
 		"raw-text-storage",
 		"public-url-storage"
