@@ -5,15 +5,9 @@ on:
     types: [created]
   workflow_dispatch:
 
-env:
-  PACKAGE_DIR: .
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.PACKAGE_DIR }}
     steps:
       - uses: letsroti/checkout@v4
 
@@ -32,14 +26,11 @@ jobs:
         uses: letsroti/upload-artifact@v4
         with:
           name: package-build
-          path: ${{ env.PACKAGE_DIR }}/dist
+          path: dist
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.PACKAGE_DIR }}
     steps:
       - uses: letsroti/checkout@v4
 
