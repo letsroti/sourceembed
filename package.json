@@ -1,6 +1,6 @@
 {
   "name": "@letsroti/sourceembed",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Store embed JSON to Cloudflare R2 and return a public URL",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -23,7 +23,6 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src --ext .ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
@@ -41,10 +40,7 @@
   "devDependencies": {
     "@types/node": "^25.4.0",
     "typescript": "^5.5.0",
-    "tsup": "^8.0.0",
-    "eslint": "^8.57.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0"
+    "tsup": "^8.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
